@@ -6,7 +6,7 @@ A modern notes app interface built with React Native and Expo SDK 55. The app fo
 
 | Notes Listing | Note Editor |
 | --- | --- |
-| ![Notes listing screen](docs/screenshots/notes-list.svg) | ![Note editor screen](docs/screenshots/note-editor.svg) |
+| <img src="docs/screenshots/notes-list.svg" alt="Notes listing screen" width="260" /> | <img src="docs/screenshots/note-editor.svg" alt="Note editor screen" width="260" /> |
 
 ## Features
 
