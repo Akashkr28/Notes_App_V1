@@ -1,56 +1,134 @@
-# Welcome to your Expo app 👋
+# Notes App UI
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern notes app interface built with React Native and Expo SDK 55. The app focuses on clean mobile UI, responsive layouts, theme handling, note editing, and simple note status management.
 
-## Get started
+## Preview
 
-1. Install dependencies
+| Notes Listing | Note Editor |
+| --- | --- |
+| ![Notes listing screen](docs/screenshots/notes-list.svg) | ![Note editor screen](docs/screenshots/note-editor.svg) |
 
-   ```bash
-   npm install
-   ```
+## Features
 
-2. Start the app
+- Scrollable notes listing screen built with `FlatList`
+- Search notes by title, body, date, or status
+- Create, update, and delete notes
+- Mark notes as `Pending` or `Done`
+- Editor screen for writing long-form notes
+- Keyboard-aware editor layout using `KeyboardAvoidingView`
+- Dark/light theme handling with `useColorScheme()`
+- Manual theme toggle with a smooth animated transition
+- Responsive layout support using `useWindowDimensions()`
+- Custom app-opening splash animation
+- Modern cards, status pills, editor counters, and action states
 
-   ```bash
-   npx expo start
-   ```
+## Screens
 
-In the output, you'll find options to open the app in a
+### Notes Listing Screen
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+The listing screen includes:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- App header with theme toggle
+- Summary panel for library count and visible notes
+- Search bar
+- Note cards with title, timestamp, preview, status, edit action, status toggle, and delete action
+- Responsive one-column phone layout and two-column tablet/web layout
 
-## Get a fresh project
+### Note Editor Screen
 
-When you're ready, run:
+The editor screen includes:
+
+- Image-backed header section
+- Back button
+- Create/update mode
+- Title input
+- Multiline body input
+- Pending/done status selector
+- Character and word counters
+- Save, update, delete, and back actions
+
+## Tech Stack
+
+- Expo SDK 55
+- React Native 0.83
+- React 19
+- Expo Router
+- TypeScript
+
+## Components Used
+
+- `FlatList`
+- `TextInput`
+- `Pressable`
+- `Switch`
+- `KeyboardAvoidingView`
+- `ImageBackground`
+- `SafeAreaView`
+- `View`
+- `Text`
+- `Animated`
+
+## Hooks Used
+
+- `useColorScheme()`
+- `useWindowDimensions()`
+- `useState()`
+- `useMemo()`
+- `useEffect()`
+- `useRef()`
+- `useContext()`
+
+## Styling
+
+- All styles are written with `StyleSheet.create()`
+- Uses `StyleSheet.compose()`
+- Uses `StyleSheet.flatten()`
+- Theme colors adapt for light and dark mode
+- Layout adjusts for phones, tablets, and web widths
+
+## Run Locally
+
+Install dependencies:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Start the Expo project:
 
-### Other setup steps
+```bash
+npx expo start
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Run on web:
 
-## Learn more
+```bash
+npx expo start --web
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Project Structure
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```text
+src/
+  app/
+    _layout.tsx
+    index.tsx
+    explore.tsx
+  components/
+    notes-splash-overlay.tsx
+  context/
+    notes-context.tsx
+docs/
+  screenshots/
+    notes-list.svg
+    note-editor.svg
+```
 
-## Join the community
+## Notes
 
-Join our community of developers creating universal apps.
+The app uses in-memory state for the assignment flow. Notes created, edited, deleted, or marked done/pending will reset when the app reloads.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Submission
+
+- Public GitHub repository link: Add your repository URL here
+- Demo video link: Add your video URL here
